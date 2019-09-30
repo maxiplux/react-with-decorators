@@ -1,4 +1,19 @@
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+yarn add --dev customize-cra react-app-rewired @babel/plugin-proposal-decorators
++    "start": "react-app-rewired start",
++    "build": "react-app-rewired build",
++    "test": "react-app-rewired test",
+
+config-overrides.js
+const { override, addDecoratorsLegacy } = require('customize-cra')
+
+// Adds legacy decorator support to the Webpack configuration.
+module.exports = override(addDecoratorsLegacy())
+
 
 ## Available Scripts
 
